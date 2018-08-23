@@ -52,4 +52,4 @@ View and run the script run-2-Ephemeral.sh
 ---
 
 
-Congrats! You now know how to run InterSystems IRIS Data Platform containers with the various Docker and IRIS options.
+Congrats! :tada: You now know how to run InterSystems IRIS Data Platform containers with the various Docker and IRIS options. :tada:
