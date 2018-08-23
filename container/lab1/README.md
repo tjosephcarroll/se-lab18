@@ -196,9 +196,38 @@ Now, after the retagging you can push it
 $ docker push <MY_DOCKER_ID_NAME>/service:v1
 ```
 
+Verify that it is available for consumption in Docker Hub.
+Point your browser to
+```
+https://hub.docker.com/u/<MY_DOCKER_ID_NAME>
+```
+
+7. **Use it** -
+Extra bonus: to close the circle let's make use of that same artefact or container in a public cloud.
+    * Use one of the students credentials
+    * Connecte to GCP and create a a compute-node instance (Compute Engine --> VM instances)
+    * for base OS select a Container Optimized image (so we don't have to install Docker)
+        - select http traffic when creating the instance so that we have port 80 available
+        - the default instance give us a public IP
+    * once the instance is up and running check Docker is installed with any command you know
+    * run your container
+    	- you'll need to log in to the registry
+    	- make sure the container is public
+    	- run it
+    	
+
+```
+$ docker run -d -p 80:8080 <MY_DOCKER_ID_NAME>/service:v1
+```
+        - test it with both command you know
+    	    - curl http://localhost:80
+    	    - http://<public_ip>
+
+
 ---
 
-Congrats! :tada: You're now a container expert that can pull, run, build & push containers and 
+Congrats! :tada: 
+You're now a container expert that can pull, run, build & push containers and 
 use the same operational commands on most modern platforms: 
 * x86-64 Linux (Ubuntu, RHEL, SUSE, Debian, Fedora, etc.)
 * ARM (Android, Rasperry PI, Arduino, microcontrollers, etc.)
