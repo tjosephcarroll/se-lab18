@@ -205,15 +205,18 @@ https://hub.docker.com/u/<MY_DOCKER_ID_NAME>
 7. **Use it in the cloud** -
 Extra bonus: to close the circle let's make use of that same artefact or container in a public cloud.
     * Use one of the students credentials
-    * Connecte to GCP and create a a compute-node instance (Compute Engine --> VM instances)
-    * for base OS select a Container Optimized image (so we don't have to install Docker)
-        - select http traffic when creating the instance so that we have port 80 available
-        - the default instance give us a public IP
-    * once the instance is up and running check Docker is installed with any command you know
-    * run your container
+    * Connect to GCP and create a a compute-node instance (Compute Engine --> VM instances)
+    * Name it
+    * For the base OS or *Boot disk* 
+        - select one of Google *Container Optimized OS* image (so we don't have to install Docker)
+    * Select "Allow HTTP traffic" so that we have port 80 available
+        - the default instance give us a public IP so we are OK
+    * Default everything else
+    * Once the instance is up and running check Docker is installed with any command you know
+    * Run your container :)
     	- you'll need to log in to the registry (Docker Hub where you pushed it)
-    	- make sure the container is marked as public (in Docker Hub - settings) if it does not work
-    	- run it
+    	- make sure the container is marked as public (in Docker Hub - Settings) if it does not work
+    	- run it! Don't pull it.
     	
 
 ```
