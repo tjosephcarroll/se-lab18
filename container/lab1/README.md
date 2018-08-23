@@ -47,7 +47,7 @@ The build process starts with the declaration state -in a *Dockerfile*, of what 
 
 We will build an app and package it up in a container that we can then run anywhere.
 
-1. **Let's create an App.**
+1. **Let's create an App** - 
 Copy & paste the following code in a file called server.js (it's javascript for Node.js but it could have been as easily GO, Python, etc.)
 ```
 var http = require('http');
@@ -61,7 +61,7 @@ www.listen(8080);
 
 or simply copy/paste from Github or clone this lab so that at the end you have a *server.js* file.
 
-2. **Node.js.** 
+2. **Node.js** -  
 If you have Node.js installed test your app or
 install Node.js and test it :)
 https://nodejs.org/en/download/
@@ -79,7 +79,7 @@ $ curl http://127.0.0.1:8080
 You can now stop Node.js with a CTRL-C on the terminal where you launched it.
 
 
-3. **Creating the Container Definition.**
+3. **Creating the Container Definition** - 
 Instead of running a container and copying things in the container and committing it to a new container image, as in the previous exercise, we will automate its creation via the Docker build command and simply provide the declaration of what we want in the container and what should be running.
 
 The following is the container declaration to copy & paste in a file called *Dockerfile*.
@@ -106,7 +106,7 @@ What do you see?
 For this exercise, again you can simply copy/paste from this Github page or clone this lab so that at the end you have a Dockerfile file as per example.
 
 
-4. **Building the Container.**
+4. **Building the Container** - 
 After the definition in the Dockerfile, let's build it
 ```
 $ docker build -t service:v1 .
@@ -122,7 +122,7 @@ also investigate all the container layers via
 $ docker history service:v1
 ```
 
-5. **Running the new Container.**
+5. **Running the new Container** - 
 Let's run the container
 but before we do that let's do some housekeeping just in case
 * First, list all running containers
@@ -171,7 +171,7 @@ $ docker ps -a
 $ docker rm my service
 ```
 
-6. **Push it.**
+6. **Push it** - 
 Now that we have the app service packaged up, let's push it to our personal container repository for sharing it or pulling it from a cloud node.
 We will use our individual user accounts on Docker Hub and push our *service:v1* container image to that account
 
