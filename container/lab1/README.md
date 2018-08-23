@@ -198,7 +198,7 @@ $ docker push <MY_DOCKER_ID_NAME>/service:v1
 
 ---
 
-Congrats! You're now a container expert that can pull, run, build & push containers and 
+Congrats! :tada: You're now a container expert that can pull, run, build & push containers and 
 use the same operational commands on most modern platforms: 
 * x86-64 Linux (Ubuntu, RHEL, SUSE, Debian, Fedora, etc.)
 * ARM (Android, Rasperry PI, Arduino, microcontrollers, etc.)
