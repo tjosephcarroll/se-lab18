@@ -41,8 +41,8 @@ View and run the script run-2-Ephemeral.sh
     * View and run the script *run-2-Ephemeral*
     * you will need an *iris.key* to operate appropriately from this stage
 
-4. **Full Durable IRIS** - At this stage we are either developing, testing or running in pre-production or production mode with the Durable %SYS feature, effectively running with all persustent capabilities and bahaving as a first class citizen of the container world.
-    * We want to make sure we retain IRIS system setting over container re-starts or upgrade and therefore we need to implement the Durable %SYS feature
+4. **Full Durable IRIS** - At this stage we are either developing, testing or running in pre-production or production mode with the Durable %SYS feature, effectively running with all persistent capabilities and behaving as a first-class citizen of the container world.
+    * We want to make sure we retain IRIS system setting over container re-starts or upgrade, and therefore we need to implement the Durable %SYS feature
         * check the ISC_DATA_DIRECTORY env var
         * check that there is a corresponding bind mounted volume [-v | --volume | --mount]
         * view & run the script *run-3-DurableSYS.sh*
