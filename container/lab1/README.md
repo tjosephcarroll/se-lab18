@@ -211,17 +211,19 @@ Extra bonus: to close the circle let's make use of that same artefact or contain
         - the default instance give us a public IP
     * once the instance is up and running check Docker is installed with any command you know
     * run your container
-    	- you'll need to log in to the registry
-    	- make sure the container is public
+    	- you'll need to log in to the registry (Docker Hub where you pushed it)
+    	- make sure the container is marked as public (in Docker Hub - settings) if it does not work
     	- run it
     	
 
 ```
 $ docker run -d -p 80:8080 <MY_DOCKER_ID_NAME>/service:v1
 ```
-        - test it with both command you know
-    	    - curl http://localhost:80
-    	    - http://<public_ip>
+
+Now test it & verify it with all the commands you know
+    * docker ps
+    * curl http://localhost:80
+    * http://<public_ip>
 
 
 ---
@@ -230,7 +232,7 @@ Congrats! :tada:
 You're now a container expert that can pull, run, build & push containers and 
 use the same operational commands on most modern platforms: 
 * x86-64 Linux (Ubuntu, RHEL, SUSE, Debian, Fedora, etc.)
-* ARM (Android, Rasperry PI, Arduino, microcontrollers, etc.)
+* ARM (Rasperry PI, Android, Arduino, microcontrollers, etc.)
 * Windows
 * IBM 
 	- POWER & 
