@@ -202,7 +202,7 @@ Point your browser to
 https://hub.docker.com/u/<MY_DOCKER_ID_NAME>
 ```
 
-7. **Use it** -
+7. **Use it in the cloud** -
 Extra bonus: to close the circle let's make use of that same artefact or container in a public cloud.
     * Use one of the students credentials
     * Connecte to GCP and create a a compute-node instance (Compute Engine --> VM instances)
@@ -221,9 +221,9 @@ $ docker run -d -p 80:8080 <MY_DOCKER_ID_NAME>/service:v1
 ```
 
 Now test it & verify it with all the commands you know
-    * docker ps
-    * curl http://localhost:80
-    * http://<public_ip>
+- docker ps
+- curl http://localhost:80
+- http://<public_ip>
 
 
 ---
