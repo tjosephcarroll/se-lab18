@@ -5,11 +5,11 @@ Points (a) and (b) below allows us to test these 2 methodologies
 
 
 **a)**
-run a container
-stop it
-commit the changes done to a new one
+run a container,
+stop it,
+commit the changes done to a new one.
 
-let's try it out:
+Let's try it out:
 - we will run a container and jump in the internal shell
 - we will then create a file
 - then exit the container
@@ -47,8 +47,8 @@ The build process starts with the declaration state -in a *Dockerfile*, of what 
 
 We will build an app and package it up in a container that we can then run anywhere.
 
-1. **Let's create an App**
-copy & paste the following code in a file called server.js (it's javascritp for Node.js but it could have been as easily GO, Python, etc.)
+1. **Let's create an App.**
+Copy & paste the following code in a file called server.js (it's javascript for Node.js but it could have been as easily GO, Python, etc.)
 ```
 var http = require('http');
 var handleRequest = function(request, response) {
@@ -61,7 +61,7 @@ www.listen(8080);
 
 or simply copy/paste from Github or clone this lab so that at the end you have a *server.js* file.
 
-2. **Node.js** 
+2. **Node.js.** 
 If you have Node.js installed test your app or
 install Node.js and test it :)
 https://nodejs.org/en/download/
@@ -71,13 +71,15 @@ Let's launch the app via
 $ node server.js
 ```
 
-and verify it with a browser or another shell with 
+and verify it works with a browser or another shell with 
 ```
 $ curl http://127.0.0.1:8080
 ```
 
+You can now stop Node.js with a CTRL-C on the terminal where you launched it.
 
-3. **Creating the Container Definition**
+
+3. **Creating the Container Definition.**
 Instead of running a container and copying things in the container and committing it to a new container image, as in the previous exercise, we will automate its creation via the Docker build command and simply provide the declaration of what we want in the container and what should be running.
 
 The following is the container declaration to copy & paste in a file called *Dockerfile*.
@@ -104,7 +106,7 @@ What do you see?
 For this exercise, again you can simply copy/paste from this Github page or clone this lab so that at the end you have a Dockerfile file as per example.
 
 
-4. **Building the Container**
+4. **Building the Container.**
 After the definition in the Dockerfile, let's build it
 ```
 $ docker build -t service:v1 .
@@ -120,7 +122,7 @@ also investigate all the container layers via
 $ docker history service:v1
 ```
 
-5. **Running the new Container**
+5. **Running the new Container.**
 Let's run the container
 but before we do that let's do some housekeeping just in case
 * First, list all running containers
@@ -169,22 +171,22 @@ $ docker ps -a
 $ docker rm my service
 ```
 
-6. **Push it**
-Now that we have the app service packaged up, let' push it to our personal container repository for sharing it or pulling it from a cloud node.
-We will use our individual user accounts on Docker Hub and push our service:v1 container image to that account
+6. **Push it.**
+Now that we have the app service packaged up, let's push it to our personal container repository for sharing it or pulling it from a cloud node.
+We will use our individual user accounts on Docker Hub and push our *service:v1* container image to that account
 
 * make sure you're logged in via
 ```
 $ docker login -u=<USERNAME>
 
-or ot make sure we address the right registry -although it's the default:
+or to make sure we address the right registry -although it's the default, try
 $ docker login docker.io -u <USERNAME> 
 ```
 
 * Move the local container image to the personal registry. Remember that by default container images pushed to Docker Hub are public. You can have private registry but you have to pay.
-* A simple docker push will most probably fail as the container must be names according to your registry.
-    * at present we have a simple service:v1
-    * The individual account on Docker Hub contains our Docker ID so we need to rename or re-tag our image first before Docker knows where to upload it
+* A simple docker push will most probably fail as the container must be named according to your registry.
+    * at present we have a simple *service:v1*
+    * The individual account on Docker Hub contains our Docker ID so we need to rename or re-tag our image first before Docker knows where to upload it to
 ```
 $ docker tag service:v1 <MY_DOCKER_ID_NAME>/service:v1
 ```
@@ -196,4 +198,13 @@ $ docker push <MY_DOCKER_ID_NAME>/service:v1
 
 ---
 
-Congrats! You're now a container expert that can pull, run, build & push containers.
+Congrats! You're now a container expert that can pull, run, build & push containers and 
+use the same operational commands on most modern platforms: 
+* x86-64 Linux (Ubuntu, RHEL, SUSE, Debian, Fedora, etc.)
+* ARM (Android, Rasperry PI, Arduino, microcontrollers, etc.)
+* Windows
+* IBM 
+	- POWER & 
+	- Z mainframe architectures
+
+	
