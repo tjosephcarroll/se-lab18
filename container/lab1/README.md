@@ -160,7 +160,7 @@ or
 via your browser
 ```
 
-You might as well quickly monitor your container, just in case there is a heavy worload coming & you need to spin another one up
+You might as well quickly monitor your container, just in case there is a heavy worload coming & you need to spin up another one :-o
 ```
 $ docker stats myservice
 ```
@@ -209,6 +209,13 @@ Point your browser to
 ```
 https://hub.docker.com/u/<MY_DOCKER_ID_NAME>
 ```
+
+Example of myservice in the Docker Hub container registry
+![Docker Hub registry displaying myservice](../resources/docker_hub_myservicePushed.jpg)
+
+Viewing the Tags for that same container image
+![Docker Hub registry displaying myservice](../resources/docker_hub_myserviceTags.jpg)
+
 
 7. **Use it in the cloud** -
 Extra bonus: to close the circle let's make use of that same artefact or container in a public cloud.
