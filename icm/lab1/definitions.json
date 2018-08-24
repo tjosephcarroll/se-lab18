@@ -1,0 +1,13 @@
+[
+    {
+	"Role": "DM",
+	"Count": "1",
+	"LicenseKey": "ubuntu-sharding-iris.key"
+    },
+    {
+	"Role": "DS",
+	"Count": "2",
+	"StartCount": "2",
+	"LicenseKey": "ubuntu-sharding-iris.key"
+    }
+]

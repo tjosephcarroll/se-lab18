@@ -1,8 +1,8 @@
 # InterSystems Cloud Manager - Environment Setup
 
 1. **Pull InterSystems Cloud Manager (ICM)**
-    * Just in case you're coming directly to this lab: everything is pre-packaged for you in a container
-    * You have nothing to install and configure of the following technologies, just pull the container as per command below, and you'll be able to setup a working environment
+    * Everything is pre-packaged for you in a container
+    * You have nothing to install and configure
         * JVM
         * Terraforms
         * environment setup
@@ -10,13 +10,12 @@
 ```
 $ docker pull intersystems/icm:2018.2...
 ```
----
 
 2. **ICM Automates the Environment**
-The easiest way to get started with ICM is by using the /Samples/* in the container, as we saw in Lab0. However, there are a couple of issues that can be annoying and uncomfortable for some like (a) using vi inside the contianer and (b) loosing all your settings when exiting the container environment.
-Many issues with ICM, like with anything "cloud", revolve around the corollary security setup needed, the correct privileges of the account for using IaaS resources, latency & timeouts, etc. We must think of it as an hostile environment. Everything comes to us early in the cloud and retrofitting things is usually thougher. We do not control a cloud environment like we control and manage our latop. We are merely users of resources and we must adhere to the APIs at our disposal. We have tried to make things simpler and welcome your feedback. ICM & ISC help us in several ways. Let's get started:
+The easiest way to get started with ICM is by using the /Samples/* as we saw in Lab0. we provide in the container. However, there are a couple of issues that could make their use a little uncomfortable (a) using vi inside the contianer and (b) loosing all your settings when exiting the cont
+Many issues with ICM, like with anything "cloud", revolve around the corollary security setup needed, the correct privileges with accounts for useing IaaS resources, latency & timeouts, etc. We must think of it as an hostile environment by its nature wrt securoty and one that must be prepared. Everything comes to us early in the cloud. We do not control a cloud environemtn like we control and manage our latop. We are merely users of resources and we must adhere to the API at our disposal. We have tried to make things simpler and welcome your feedback. ICM & ISC help us in several ways. Let's get started:
     1. **Credentials** for the IaaS providers
-        1. *AWS:* [link to corporate credentials explained](https://usconfluence.iscinternal.com/display/IAWS/AWS+Credentials+Utility+for+ICM+and+AWS+CLI); credentials are valid for 12 hours. There is a further link to select and here is the [direct link](https://awscredentials.intersystems.com)
+        1. *AWS:* [link to corporate credentials valid for 12 hours](https://usconfluence.iscinternal.com/display/IAWS/AWS+Credentials+Utility+for+ICM+and+AWS+CLI) see the instructions (there is a further link to select and here is the [direct link](https://awscredentials.intersystems.com)
             * input your ISC SSO crendentials
             * click the "Get AWS Credentials" button from the "AWS Data Platform" central section
             * save those credential in a file
@@ -29,22 +28,19 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
     5. **TLS certificates**
         1.  ICM can quickly create & use temporary certs for you by running a script
     7. **InterSystems license key**
-        1. ICM can quickly prepare a key by running a script (be VPN'd in)
+        1. ICM can quickly prepare a key for us by running a script (be VPN'd in)
 
-
-
-
-
-[ICM internal resources (a)ICM Getting started Guide and (b)ICM Functional Specification](https://usconfluence.iscinternal.com/display/TBD/Containers+Port#ContainersPort-ICMResources)
+FYI
+[ICM Getting started guide](http://steven...)
     
----    
+    
 
 3. **Reusable Script Preparation** -
     1. Make sure you have your credentials for the selected public provider and that they are saved in a file. You'll have to tell ICM to grab that file.
     2. Don't worry about
         1. ssh keys
         2. TLS certs &
-        3. InterSystems IRIS key - ICM takes care of that for demo & POC efforts
+        3. InterSystems IRIS key - ICM supports you in your demo & POC efforts
     3. Create a working "cloud" directory. Let's call it 'cloud' and cd into it. For example
         a. ```$ mkdir $HOME/cloud```
         b. ```$ cd cloud```
@@ -89,10 +85,9 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
         ```
     12. :+1: Congrats! ICM is ready to provision your cloud infrastructure and your script can be used again and again.
  
----
 
 4. **Securities and Keys** -
-    1. Instead of starting from scratch with our definitions we will *leverage the samples* provided, so, run the following command to copy & verify the ICM declarative definitions we want to use
+    1. Instead of strating from scratch with our definitions we will *leverage the samples* provided, so, run the following command to copy & verify the ICM declarative definitions we want to use
     ```
     # cd /cloud
     # cp /Samples/AWS/*.json .
@@ -111,7 +106,6 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
     9. FYI all executables and scripts provided by ICM are in your path and can be found in */ICM/bin*
     10. 
     11. bbb
----
 
 5. **Infrastructure Definition**
     1. It's time to make sure our declarative JSON definitions are what we want to carve out of those clouds, so, with your favourite editor, open and edit the **defaults.json**. Please change: 
@@ -144,9 +138,8 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
     "Mirror": "false"
     }
     ```
-    2. ...
+    3. ...
 
----
 
 6. **IRIS Cluster Definition**
     1. While the *defaults.json* file is mostly concerned with the infrastructure side, the **definitions.json** specifies the type of InterSystems IRIS cluster we want. For this first run we are happy to just have this simple definition of 1xDM and 2xDS. There is nothing to do for you. Lucky guy :)
@@ -165,23 +158,7 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
       }
     ]
     ```
-    2. ...
----
-
-7. **Run the Provisioning**
-    1. From the /cloud directory issue the simple command
-    ```
-    # icm provision
-    ```
-    3. if you are interested in having more feedback you can use the ```--verbode``` flag
----
-
-8. **Run the Deployment**
-    1. Issue the service deployment command
-    ```
-    # icm run
-    ```
-    3. bbb 
----
-
-Congrats! :+1: You now have a properly setup environment where you can leverage your preferred tools for configuring & using InterSystems Cloud Manager definitions files, save them together with keys, certifiactes, credentials and other scripts in source-control systems, vaults, etc. :sparkles: :tada:
+    3. ...
+     
+7. AAA
+8. BBB
