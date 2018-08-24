@@ -160,6 +160,14 @@ or
 via your browser
 ```
 
+You might as well quickly monitor your container, just in case there is a heavy worload coming & you need to spin another one up
+```
+$ docker stats myservice
+```
+
+![container stats](../resources/docker_stats_container1.jpg)
+
+
 Stop & remove the container
 ```
 $ docker stop myservice
@@ -168,7 +176,7 @@ $ docker ps
 
 $ docker ps -a
 
-$ docker rm my service
+$ docker rm myservice
 ```
 
 6. **Push it** - 
