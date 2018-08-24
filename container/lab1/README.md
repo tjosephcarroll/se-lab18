@@ -210,10 +210,15 @@ Point your browser to
 https://hub.docker.com/u/<MY_DOCKER_ID_NAME>
 ```
 
+
 Example of myservice in the Docker Hub container registry
+
 ![Docker Hub registry displaying myservice](../resources/docker_hub_myservicePushed.jpg)
 
+
+
 Viewing the Tags for that same container image
+
 ![Docker Hub registry displaying myservice](../resources/docker_hub_myserviceTags.jpg)
 
 
@@ -239,7 +244,7 @@ $ docker run -d -p 80:8080 <MY_DOCKER_ID_NAME>/service:v1
 ```
 
 Now test it & verify it with all the commands you know
-- docker ps
+- docker ps, history, stats, inspect, etc.
 - curl http://localhost:80
 - http://<public_ip>
 
@@ -248,7 +253,7 @@ Now test it & verify it with all the commands you know
 
 Congrats! :tada: 
 You're now a container expert that can pull, run, build & push containers and 
-use the same operational commands on most modern platforms: 
+use the same operational commands on most modern platforms like:
 * x86-64 Linux (Ubuntu, RHEL, SUSE, Debian, Fedora, etc.)
 * ARM (Rasperry PI, Android, Arduino, microcontrollers, etc.)
 * Windows
