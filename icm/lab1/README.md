@@ -19,8 +19,8 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
         1. *AWS:* [link to corporate credentials explained](https://usconfluence.iscinternal.com/display/IAWS/AWS+Credentials+Utility+for+ICM+and+AWS+CLI); credentials are valid for 12 hours. There is a further link to select and here is the [direct link](https://awscredentials.intersystems.com)
             * input your ISC SSO crendentials
             * click the "Get AWS Credentials" button from the "AWS Data Platform" central section
-            * save those credential in a file
             * ![Temporary Credentials for AWS](../resources/ISC_AWS_tempCredendials.jpg)
+            * save those credential in a file
         2. *GCP*
             * student ID
             * temp training GCP project id: salesengineertraining2018 
