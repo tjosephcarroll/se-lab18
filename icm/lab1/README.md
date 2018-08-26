@@ -53,12 +53,12 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
         2. TLS certs &
         3. InterSystems IRIS key - ICM takes care of that for demo & POC efforts
     3. Create a working "cloud" directory. Let's call it 'cloud' and cd into it. For example
-        (a) ```$ mkdir $HOME/cloud``` and
-        (b) ```$ cd cloud```
+        * ```$ mkdir $HOME/cloud``` and
+        * ```$ cd cloud```
     4. Create a subdir of the cloud directory called "key" that we will use later for all *security* related files
-    ```$ mkdir cloud```
+        * ```$ mkdir cloud```
     5. Copy your *credentials file* to this cloud/key  working directory; for example
-    ```$ cp $HOME/Download/aws.credentials $HOME/cloud/key/```
+        * ```$ cp $HOME/Download/aws.credentials $HOME/cloud/key/```
     6. ICM can provision licenses keys or if you want to use yours or test them just copy the *InterSystems IRIS license key* in the same cloud/key directory as above
     7. let's *prepare a script* to launch ICM so that we don't have to remember all the details of the docker command. Use *vi|vim|nano|emcas|editor-of-choice* and create a bash or powershell script called *icm.sh* and copy/paste the following code.
 
@@ -87,8 +87,8 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
     10. run it
         * ```$ ./icm.sh``` 
     11. You should be inside the ICM container ready to run the ICM commands
-        a. Check that your cloud directory was mounted ```ls -l```
-        b. cd into it to verify that the content of the host dir is all there and that ICM responds
+        * Check that your cloud directory was mounted ```ls -l```
+        * cd into it to verify that the content of the host dir is all there and that ICM responds
         ```
         # cd /cloud
         # ls -l
@@ -106,9 +106,9 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
     # ls -l
     ```
     3. Create temporary *ssh keys* and store them in ./key 
-    ```# keygenSSH.sh ./key/ ```
+        * ```# keygenSSH.sh ./key/ ```
     5. Create temporary TLS certificates and again let's store them away in the ./key directory
-    ```# keygenTLS.sh ./key/ ```
+        * ```# keygenTLS.sh ./key/ ```
     7. Create temporary InterSystems IRIS key files (make sure you're VPN'd in) and copy them in the same /cloud/key location
     ```
     # getLicense.sh
@@ -116,22 +116,21 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
     # ls -l ./key
     ```
     9. FYI all executables and scripts provided by ICM are in your path and can be found in */ICM/bin*
-    
+    10. You are all set with the security part.
 
 ---
 
 
 5. **Infrastructure Definition**
-    1. It's time to make sure our declarative JSON definitions are what we want to carve out of those clouds, so, with your favourite editor, open and edit the **defaults.json** and adjust names and paths to your local resources: 
-        a. Change the UPPERCASE values (Label & DockerUsername) 
-        b. Review the Credentials file location value
-        c. Add a password for all your IRIS cluster instances (ISCPassword)
-        d. Decide which IaaS Region & Zone you want to run your cluster in
-            * [AWS Regions](https://aws.amazon.com/about-aws/global-infrastructure/)
+    1. It's time to make sure our declarative JSON definitions are what we want to carve out of those clouds, so, with your favourite editor, open and edit the **defaults.json** and adjust names and paths to your local resources:
+        * Change the UPPERCASE values (Label & DockerUsername) 
+        * Review the Credentials file location value
+        * Add a password for all your IRIS cluster instances (ISCPassword)
+        * Decide which IaaS Region & Zone you want to run your cluster in
+            - AWS: [AWS Regions](https://aws.amazon.com/about-aws/global-infrastructure/)
                 - ![AWS Regions Selector](../resources/AWS_RegionSelector.jpg)
-            * [GCP Regions](https://cloud.google.com/compute/docs/regions-zones/)
-                - ![GCP Region Selector](../resources/GCP_RegionSelector)
-
+            - GCP: [GCP Regions](https://cloud.google.com/compute/docs/regions-zones/)
+                - ![GCP Region Selector](../resources/GCP_RegionSelector.jpg)
 
     ```
     {
@@ -188,7 +187,8 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
     # icm provision
     ```
     2. if you are interested in having more feedback you can use the ```--verbose``` flag
-    3. if you want to measure the IaaS timing you could prepend a time command as in ```$ time icm provision```
+    3. if you want to measure the IaaS timing you could prepend a time command as in 
+        * ```$ time icm provision```
     4. Check via the IaaS (AWS, GCP, Azure) portal the created resources
 
 ---
@@ -205,4 +205,4 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
 
 Congrats! :+1: You now have a properly setup environment on your local workstatio where you can leverage your preferred tools for configuring & using InterSystems Cloud Manager definitions files, save them together with keys, certificates, credentials and other scripts in source-control systems, vaults, etc. :sparkles: :tada:
 
-In the next lab we will see all the available commands we have in ICM
+In the next lab we will see all the remaining ICM commands.
