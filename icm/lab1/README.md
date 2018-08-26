@@ -98,7 +98,7 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
  
 ---
 
-4. **Securities and Keys** -
+4. **Security Keys & Samples** -
     1. Instead of starting from scratch with our definitions we will *leverage the samples* provided, so, run the following command to copy & verify the ICM declarative definitions we want to use
     ```
     # cd /cloud
@@ -131,7 +131,7 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
                 - ![AWS Regions Selector](../resources/AWS_RegionSelector.jpg)
             - GCP: [GCP Regions](https://cloud.google.com/compute/docs/regions-zones/)
                 - ![GCP Region Selector](../resources/GCP_RegionSelector.jpg)
-        * Example *defaults.json*:
+        * Example of *defaults.json*:
         ```
         {
         "Provider": "AWS",
@@ -157,7 +157,7 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
         "Mirror": "false"
         }
         ```
-    2. Consult & reviwe with your colleagues next to you on your details...
+    2. Consult & review your *default.json* with the colleague next to you...
 
 ---
 
@@ -178,7 +178,7 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
       }
     ]
     ```
-    2. ...
+    2. for the adventurous: make sure you [read the documentation](https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GICM) before getting frustrated :)
 ---
 
 7. **Run the Provisioning**
