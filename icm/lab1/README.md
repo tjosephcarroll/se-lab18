@@ -131,33 +131,33 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
                 - ![AWS Regions Selector](../resources/AWS_RegionSelector.jpg)
             - GCP: [GCP Regions](https://cloud.google.com/compute/docs/regions-zones/)
                 - ![GCP Region Selector](../resources/GCP_RegionSelector.jpg)
-
-    ```
-    {
-    "Provider": "AWS",
-    "Label": "MYINITIALS",
-    "Tag": "t1",
-    "DataVolumeSize": "10",
-    "SSHUser": "ec2-user",
-    "SSHPublicKey": "/cloud/key/insecure-ssh2.pub",
-    "SSHPrivateKey": "/cloud/key/insecure",
-    "DockerImage": "intersystems/iris:2018.2.0-dev",
-    "DockerUsername": "MY-DOCKER_HUB_ID",
-    "DockerPassword": "",
-    "TLSKeyDir": "/cloud/key",
-    "LicenseDir": "/cloud/key/",
-    "Region": "us-west-1",
-    "Zone": "us-west-1c",
-    "AMI": "ami-18726478",
-    "InstanceType": "m4.large",
-    "Credentials": "./aws.credentials",
-    "SystemMode": "TEST",
-    "ISCPassword": "",
-    "Namespace": "DB",
-    "Mirror": "false"
-    }
-    ```
-    2. ...
+        * Example *defaults.json*:
+        ```
+        {
+        "Provider": "AWS",
+        "Label": "MYINITIALS",
+        "Tag": "t1",
+        "DataVolumeSize": "10",
+        "SSHUser": "ec2-user",
+        "SSHPublicKey": "/cloud/key/insecure-ssh2.pub",
+        "SSHPrivateKey": "/cloud/key/insecure",
+        "DockerImage": "intersystems/iris:2018.2.0-dev",
+        "DockerUsername": "MY-DOCKER_HUB_ID",
+        "DockerPassword": "",
+        "TLSKeyDir": "/cloud/key",
+        "LicenseDir": "/cloud/key/",
+        "Region": "us-west-1",
+        "Zone": "us-west-1c",
+        "AMI": "ami-18726478",
+        "InstanceType": "m4.large",
+        "Credentials": "./aws.credentials",
+        "SystemMode": "TEST",
+        "ISCPassword": "",
+        "Namespace": "DB",
+        "Mirror": "false"
+        }
+        ```
+    2. Consult & reviwe with your colleagues next to you on your details...
 
 ---
 
