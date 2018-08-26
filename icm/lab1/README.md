@@ -22,8 +22,13 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
             * ![Temporary Credentials for AWS](../resources/ISC_AWS_tempCredendials.jpg)
             * save those credential in a file
         2. *GCP*
-            * student ID
-            * temp training GCP project id: salesengineertraining2018 
+            * Connect to the Goocle cloud console: [https://console.cloud.google.com/](https://console.cloud.google.com/)
+            * Use your student ID
+            * Switch to the temporary GCP Project: SalesEngineerTraining2018
+            * Navigate to *"IAM & admin"* and select *"Service accounts"*
+            * Identify the *"Compute Engine default service account"* and under the *"Action"* column of the same raw, click the 3 dots "options" symbol and select *"Create key"*
+            * ![Temporary Credentials for GCP](../resources/ISC_GCP_tempCredentials.jpg)
+            * Chose Key type "JSON* and then click *"Create"* for saving your credentials file
         3. *Azure*
             * ...
     3. **ssh keys**
