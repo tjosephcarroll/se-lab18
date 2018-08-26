@@ -13,8 +13,8 @@ $ docker pull intersystems/icm:2018.2...
 ---
 
 2. **ICM Automates the Environment**
-The easiest way to get started with ICM is by using the /Samples/* in the container, as we saw in Lab0. However, there are a couple of issues that can be annoying and uncomfortable for some like (a) using vi|nano|emcas inside the contianer and (b) loosing all your settings when exiting the container environment.
-Many issues with ICM, like with anything "cloud", revolve around the corollary security setup needed, the correct privileges of the account for using IaaS resources, latency & timeouts, etc. We must think of it (the cloud env) as an hostile environment. Everything comes to us early in the cloud and retrofitting things (especially security) is usually thougher. We do not control a cloud environment like we control and manage our latop. We are merely users of resources and we must adhere to the APIs at our disposal. We have tried to make things simpler and welcome your feedback. ICM & ISC help us in several ways. Let's get started:
+The easiest way to get started with ICM is by using the /Samples/* in the container, as we saw in Lab0. However, there are a couple of issues that can be annoying and uncomfortable for some, like: (a) using vi|nano|emcas inside the contianer and (b) loosing all your settings when exiting the container environment.
+Many issues with ICM, like with anything "cloud", revolve around the security setup needed, the correct privileges of the account for using IaaS resources, latency & timeouts, etc. We must think of it (the cloud env) as an hostile environment. Everything comes to us early in the cloud and retrofitting things (especially security) is usually thougher. We do not control a cloud environment like we control and manage our latop. We are merely users of resources and we must adhere to the APIs at our disposal. We have tried to make things simpler and welcome your feedback. ICM & ISC help us in several ways. Let's get started:
     1. **Credentials** for the IaaS providers
         1. *AWS:* [link to corporate credentials explained](https://usconfluence.iscinternal.com/display/IAWS/AWS+Credentials+Utility+for+ICM+and+AWS+CLI); credentials are valid for 12 hours. There is a further link to select and here is the [direct link](https://awscredentials.intersystems.com)
             * input your ISC SSO crendentials
@@ -24,7 +24,7 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
         2. *GCP*
             * Connect to the Goocle cloud console: [https://console.cloud.google.com/](https://console.cloud.google.com/)
             * Use your student ID
-            * Switch to the temporary GCP Project: SalesEngineerTraining2018
+            * Switch to the temporary GCP Project: *SalesEngineerTraining2018*
             * Navigate to *"IAM & admin"* and select *"Service accounts"*
             * Identify the *"Compute Engine default service account"* and under the *"Action"* column of the same raw, click the 3 dots "options" symbol and select *"Create key"*
             * ![Temporary Credentials for GCP](../resources/ISC_GCP_tempCredentials.jpg)
@@ -105,24 +105,24 @@ Many issues with ICM, like with anything "cloud", revolve around the corollary s
     # cp /Samples/AWS/*.json .        // or cp /Samples/GCP/*.json if using Google Cloud
     # ls -l
     ```
-    3. Create temporary *ssh keys* and store them in ./key 
+    2. Create temporary *ssh keys* and store them in ./key 
         * ```# keygenSSH.sh ./key/ ```
-    5. Create temporary TLS certificates and again let's store them away in the ./key directory
+    3. Create temporary TLS certificates and again let's store them away in the ./key directory
         * ```# keygenTLS.sh ./key/ ```
-    7. Create temporary InterSystems IRIS key files (make sure you're VPN'd in) and copy them in the same /cloud/key location
+    4. Create temporary InterSystems IRIS key files (make sure you're VPN'd in) and copy them in the same /cloud/key location
     ```
     # getLicense.sh
     # cp /Samples/license/* ./key/
     # ls -l ./key
     ```
-    9. FYI all executables and scripts provided by ICM are in your path and can be found in */ICM/bin*
-    10. You are all set with the security part.
+    5. FYI all executables and scripts provided by ICM are in your path and can be found in */ICM/bin*
+    6. You are all set with the security part.
 
 ---
 
 
 5. **Infrastructure Definition**
-    1. It's time to make sure our declarative JSON definitions are what we want to carve out of those clouds, so, with your favourite editor, open and edit the **defaults.json** and adjust names and paths to your local resources:
+    1. It's time to make sure our declarative JSON definitions depict exactly what we want to carve out in the cloud, so, with your favourite editor, open and edit the **defaults.json** and adjust names, resources and paths to reference your local assets:
         * Change the UPPERCASE values (Label & DockerUsername) 
         * Review the Credentials file location value
         * Add a password for all your IRIS cluster instances (ISCPassword)
