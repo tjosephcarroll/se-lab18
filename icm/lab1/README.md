@@ -1,8 +1,8 @@
 # InterSystems Cloud Manager - Environment Setup
 
 1. **Pull InterSystems Cloud Manager (ICM)**
-    * Just in case you're coming directly to this lab: everything is pre-packaged for you in a container
-    * You have nothing to install and configure of the following technologies, just pull the container as per command below, and you'll be able to setup a working environment
+    * Just in case you're coming directly to this lab: everything is pre-packaged for you in a container.
+    * You have nothing to install and configure of the following technology list; just pull the container as per command below, and you'll be able to setup a working environment with all the technolgies already packaged and configured for you
         * JVM
         * Terraforms
         * environment setup
@@ -13,15 +13,17 @@ $ docker pull intersystems/icm:2018.2...
 ---
 
 2. **ICM Automates the Environment**
-The easiest way to get started with ICM is by using the /Samples/* in the container, as we saw in Lab0. However, there are a couple of issues that can be annoying and uncomfortable for some like (a) using vi inside the contianer and (b) loosing all your settings when exiting the container environment.
-Many issues with ICM, like with anything "cloud", revolve around the corollary security setup needed, the correct privileges of the account for using IaaS resources, latency & timeouts, etc. We must think of it as an hostile environment. Everything comes to us early in the cloud and retrofitting things is usually thougher. We do not control a cloud environment like we control and manage our latop. We are merely users of resources and we must adhere to the APIs at our disposal. We have tried to make things simpler and welcome your feedback. ICM & ISC help us in several ways. Let's get started:
+The easiest way to get started with ICM is by using the /Samples/* in the container, as we saw in Lab0. However, there are a couple of issues that can be annoying and uncomfortable for some like (a) using vi|nano|emcas inside the contianer and (b) loosing all your settings when exiting the container environment.
+Many issues with ICM, like with anything "cloud", revolve around the corollary security setup needed, the correct privileges of the account for using IaaS resources, latency & timeouts, etc. We must think of it (the cloud env) as an hostile environment. Everything comes to us early in the cloud and retrofitting things (especially security) is usually thougher. We do not control a cloud environment like we control and manage our latop. We are merely users of resources and we must adhere to the APIs at our disposal. We have tried to make things simpler and welcome your feedback. ICM & ISC help us in several ways. Let's get started:
     1. **Credentials** for the IaaS providers
         1. *AWS:* [link to corporate credentials explained](https://usconfluence.iscinternal.com/display/IAWS/AWS+Credentials+Utility+for+ICM+and+AWS+CLI); credentials are valid for 12 hours. There is a further link to select and here is the [direct link](https://awscredentials.intersystems.com)
             * input your ISC SSO crendentials
             * click the "Get AWS Credentials" button from the "AWS Data Platform" central section
             * save those credential in a file
+            * ![Temporary Credentials for AWS](../resources/ISC_AWS_tempCredendials.jpg)
         2. *GCP*
-            * student ID 
+            * student ID
+            * temp training GCP project id: salesengineertraining2018 
         3. *Azure*
             * ...
     3. **ssh keys**
