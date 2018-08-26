@@ -8,7 +8,7 @@
         * environment setup
         * samples
 ```
-$ docker pull intersystems/icm:2018.2...
+$ docker pull intersystems/icm:2018.2.0-dev
 ```
 ---
 
@@ -200,9 +200,10 @@ Many issues with ICM, like with anything "cloud", revolve around the security se
     # icm run
     ```
     2. You're done!
+    3. :camel: Do not unprovision anything! We will use the cluster you've created in the next lab
 
 ---
 
-Congrats! :+1: You now have a properly setup environment on your local workstatio where you can leverage your preferred tools for configuring & using InterSystems Cloud Manager definitions files, save them together with keys, certificates, credentials and other scripts in source-control systems, vaults, etc. :sparkles: :tada:
+Congrats! :+1: You now have a properly setup environment on your local workstatio where you can leverage your preferred tools for configuring & using InterSystems Cloud Manager definitions files. The files can be saved together with keys, certificates, credentials and other scripts in source-control systems, vaults, etc. :sparkles: :tada:
 
 In the next lab we will see all the remaining ICM commands.

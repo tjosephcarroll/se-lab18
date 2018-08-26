@@ -2,7 +2,7 @@
 
 1. **Pull InterSystems Cloud Manager (ICM)**
     * Everything is pre-packaged for you in a container
-    * You have nothing to install and configure
+    * You have nothing to install and configure of the following technology list; just pull the container as per command below, and you'll be able to setup a working environment with all the technolgies already packaged and configured for you & ready to run
         * JVM
         * Terraforms
         * environment setup
@@ -34,8 +34,8 @@ The easiest way to get started with ICM is by using the /Samples/* we provide in
 4. **Pre-Run Prerequisites**
     1. **SSH Keys**. As stated, security was not an after thought and so we are forced or guided to do the right thing. ICM helps us in setting up a temporary security environment so that we can get up and running quickly. Of couse, an organization would help its employees to sort out, create and manage *ssh keys*.
         1. ``` # keygenSSH.sh```
-        2. please check that the keys are where we are told they are
-        3. and that the JSON declaration files are indeed in sync as they should
+        2. Please check that the keys are where we are told they are
+        3. And that the *default.json* declaration file is indeed in sync with the paths and file names as it should
     2. **TLS Certificates**. ICM can also setup tem TLS certs
         1. ``` # keygenTLS.sh```
         2. As the previous step, please make sure the certificates are where we are told they should be
@@ -52,4 +52,4 @@ The easiest way to get started with ICM is by using the /Samples/* we provide in
 
 ---
 
-Congrats! :+1: This was a first quick lab to make you comfortable with the initilization processes related to security and the license key. InterSystems Cloud Manager and the utilities it provides out of the box for you. 
+Congrats! :+1: This was a first quick lab to make you comfortable with InterSystems Cloud Manager and the initilization processes. As you saw they are easy and intuitive and should aid you in provviding quick demos and devlopment environments.

@@ -11,6 +11,10 @@ DIR2MOUNT=$(basename $(pwd))
 #
 docker run --name icm -it -v $PWD:/$DIR2MOUNT --cap-add SYS_TIME intersystems/icm:2018.2.0-dev
 
+# or: if you always want to find a predefined "myCloud" dir in the container just hardcode that as in.
+# It could be simpler in some situations
+# docker run --name icm -it -v $PWD:/myCloud --cap-add SYS_TIME intersystems/icm:2018.2.0-dev
+
 printf "\nExited icm container\n"
 printf "\nRemoving icm container...\nContainer removed:  "
 docker rm icm

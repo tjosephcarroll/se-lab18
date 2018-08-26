@@ -227,6 +227,7 @@ Extra bonus: to close the circle let's make use of that same artefact or contain
     * Use one of the students credentials
     * Connect to GCP and create a a compute-node instance (Compute Engine --> VM instances)
     * Name it
+	- <my-name-initials>-instance
     * For the base OS or *Boot disk* 
         - select one of Google *Container Optimized OS* image (so we don't have to install Docker)
     * Select "Allow HTTP traffic" so that we have port 80 available
@@ -234,9 +235,9 @@ Extra bonus: to close the circle let's make use of that same artefact or contain
     * Default everything else
     * Once the instance is up and running check Docker is installed with any command you know
     * Run your container :)
-    	- you'll need to log in to the registry (Docker Hub where you pushed it)
-    	- make sure the container is marked as public (in Docker Hub - Settings) if it does not work
-    	- run it! Don't pull it.
+    	- You'll need to log in to the registry (Docker Hub where you pushed it)
+    	- Make sure the container is marked as public (in Docker Hub - Settings) if it does not work
+    	- Run it! Don't pull it.
     	
 
 ```
@@ -259,6 +260,6 @@ use the same operational commands on most modern platforms like:
 * Windows
 * IBM 
 	- POWER & 
-	- Z mainframe architectures
+	- Z series mainframes
 
 	
