@@ -1,1 +1,0 @@
-InterSystems Cloud Manager labs
