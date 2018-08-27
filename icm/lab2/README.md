@@ -14,9 +14,10 @@
 ---
 
 2. **ICM Interactive Direct Connectivity Options**
-Although the benefits of working with an artefact that was built and that just need to be run is evident (distiction between BUILD and RUN phase of a container), at times it is necessary to perform some operations on a live system without the repprovisioning of a container. Or it could be the case of a customer that needs to further configure something after an InterSystems IRIS cluster soluiton is provisioned and configured or that somebody may simply want to double check thing. How do you run something interactively?
+Although the benefits of working with an artefact that was built and that just need to be run is evident (distiction between BUILD and RUN phase in DevOps), at times it is necessary to perform some operations on a live system without the repprovisioning of a container. Or it could be the case of a customer that needs to further configure something after an InterSystems IRIS cluster soluiton is provisioned-and-configured or that somebody may simply want to double check thing. How do you run something interactively? InterSystems Cloud Manager allows to connect to all the available abstration layers or components with the following commands ![ICM Management commands](../resources/ICM_mgmt_cmds.jpg)
 	1. ```# icm ssh -interactive -machine LR-DM-t3-0001```
-	2. ```# icm session -interactive -role DM -namespace DB```
+	2. ```# icm exec -interactive -machine LR-DM-t3-0001```
+	3. ```# icm session -interactive -role DM -namespace DB```
 
 3. **ICM and Copy**
 icm cp
