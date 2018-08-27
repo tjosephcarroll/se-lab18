@@ -37,7 +37,7 @@ We can obviously start any service we might want. When working with containers i
 		3. Stop the existing container
 		4. Remove the existing container
 		5. Start the new container
-		```# icm upgrade -image intersystems/iris:2021.1.2```
+			* ```# icm upgrade -image intersystems/iris:2021.1.2```
 
 or to upgrade a specific service role (or tier)
 
