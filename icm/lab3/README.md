@@ -37,21 +37,25 @@ We can obviously start any service we might want. When working with containers i
 		3. Stop the existing container
 		4. Remove the existing container
 		5. Start the new container
-			* ```# icm upgrade -image intersystems/iris:2021.1.2```
-			* or to upgrade a specific service role (or tier)
-			```# icm upgrade -image intersystems/iris:2021.1.3 -role QS```
+	
+	```# icm upgrade -image intersystems/iris:2021.1.2```
+	
+	or to upgrade a specific service role (or tier)
+	
+	```# icm upgrade -image intersystems/iris:2021.1.3 -role QS```
 
-The standard *ICM ps* command will reveal a new version running
-```
-# icm ps -container iris
+	2. The standard *ICM ps* command will reveal a new version running
+	
+	```
+	# icm ps -container iris
 
-Machine               IP Address     Container Status Health  Image
--------               ----------     --------- ------ ------  -----
-Acme-DS-TEST-0004     54.201.52.145  iris      Up     healthy isc/iris:stable
-Acme-DS-TEST-0003     54.213.27.49   iris      Up     healthy isc/iris:stable
-Acme-DM-TEST-0001     54.187.135.199 iris      Up     healthy isc/iris:stable
-Acme-QS-TEST-0002     54.191.29.125  iris      Up     healthy isc/iris:2021.1.3 <--
-```
+	Machine               IP Address     Container Status Health  Image
+	-------               ----------     --------- ------ ------  -----
+	Acme-DS-TEST-0004     54.201.52.145  iris      Up     healthy isc/iris:stable
+	Acme-DS-TEST-0003     54.213.27.49   iris      Up     healthy isc/iris:stable
+	Acme-DM-TEST-0001     54.187.135.199 iris      Up     healthy isc/iris:stable
+	Acme-QS-TEST-0002     54.191.29.125  iris      Up     healthy isc/iris:2021.1.3 <--
+	```
 
 ---
 
