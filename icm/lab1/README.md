@@ -55,8 +55,8 @@ Many issues with ICM, like with anything "cloud", revolve around the security se
     3. Create a working "cloud" directory. Let's call it 'cloud' and cd into it. For example
         * ```$ mkdir $HOME/cloud``` and
         * ```$ cd cloud```
-    4. Create a subdir of the cloud directory called "key" that we will use later for all *security* related files
-        * ```$ mkdir cloud```
+    4. Create a subdir of the *cloud* directory called "key" that we will use later for all *security* related files
+        * ```$ mkdir key```
     5. Copy your *credentials file* to this cloud/key  working directory; for example
         * ```$ cp $HOME/Download/aws.credentials $HOME/cloud/key/```
     6. ICM can provision licenses keys or if you want to use yours or test them just copy the *InterSystems IRIS license key* in the same cloud/key directory as above
@@ -71,8 +71,10 @@ Many issues with ICM, like with anything "cloud", revolve around the security se
 
     # we are mounting the PWD or $HOME/cloud (in our example) inside the container 
     # at the root level.
-    # IOW we will have '/cloud' in the container 
+    # IOW we will have '/cloud' in the container
     # with all the files found at the host level in $HOME/cloud
+    # you do have the option to hardcode the $DIR2MOUNT variable below to 'cloud' 
+    # if you so desire, but keeping it dynamics would allow you to have different directory perhaps for different customers or tests and know what you're running. It's entirley up to you.
     #
     docker run --name icm -it -v $PWD:/$DIR2MOUNT --cap-add SYS_TIME intersystems/icm:2018.2.0-dev
 
@@ -83,7 +85,7 @@ Many issues with ICM, like with anything "cloud", revolve around the security se
     
     8.  make sure that the ICM container *version* is the one you want
     9.  make sure the script can be executed
-        a.  ```$ chmod 755 icm.sh```
+        * ```$ chmod 755 icm.sh```
     10. run it
         * ```$ ./icm.sh``` 
     11. You should be inside the ICM container ready to run the ICM commands

@@ -1,4 +1,4 @@
-## InterSystems Cloud Manager Container Management Commands
+## InterSystems Cloud Manager: Services (containers) Management Commands
 
 ICM allows us to manage any other type of container with the *-docker* flag. IOW ICM calls all the way into the remote cloud compute-node with a Docker command, effectively letting us run any container. This is a very powerful feature and it's the cornerstone of **composable architecture**. Also, it is worth noting how ICM does not have its own set of commands for stopping removing, pulling and running services (containers) and uses the same verbs found with Docker, Github and similar.
 
@@ -27,7 +27,7 @@ ICM allows us to manage any other type of container with the *-docker* flag. IOW
 4. **Starting Services for a Composable Architecture**
 	1. We can obviously start any service we might want. When working with containers it is natural to start thinking in terms *services or utilities* or libraries as yet another container to run. Things just become simpler as there is no installation and configuration to worry about but only an end-point to fire up & leverage
 		* Starting a container on a tier of servers
-		```# icm start -container sysdig -role SD```
+			- ```# icm start -container sysdig -role SD```
 ---
 
 5. **Upgrading a Cluster**

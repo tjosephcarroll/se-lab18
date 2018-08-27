@@ -20,13 +20,9 @@ Although the benefits of working with an artefact that was built and that just n
 	3. ```# icm session -interactive -role DM -namespace DB```
 
 3. **ICM and Copy**
-icm cp
-The icm cp command copies a local file or directory on the specified node into the specified container. The command syntax is as follows:
- icm cp -localPath local-path [-remotePath remote-path]
-Both localPath and remotePath can be either files or directories. If both are directories, the contents of the local directory are recursively copied; if you want the directory itself to be copied, include it in remotePath.
-The remotePath argument is optional and if omitted defaults to /tmp; if remotePath is a directory, it must contain a trailing forward slash (/), or it will be assumed to be a file. You can use the -container option to copy to a container other than the default iris.
-Note:
-See also the icm scp command, which securely copies a file or directory from the local ICM container to the specified host OS.
+	1. The icm cp command copies a local file or directory on the specified node into the specified container. The command syntax is as follows:
+ 	```icm cp -localPath local-path [-remotePath remote-path]``` Both localPath and remotePath can be either files or directories. If both are directories, the contents of the local directory are recursively copied; if you want the directory itself to be copied, include it in remotePath. The remotePath argument is optional and if omitted defaults to /tmp; if remotePath is a directory, it must contain a trailing forward slash (/), or it will be assumed to be a file.
+		* Note: See also the *icm scp* command, which securely copies a file or directory from the local ICM container to the specified host OS.
 
 ---
 
