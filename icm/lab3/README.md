@@ -1,6 +1,6 @@
 ## InterSystems Cloud Manager Container Management Commands
 
-ICM allows us to manage any other type of container with the *-docker* flag. IOW ICM allows us to pass-through, all the way to the cloud compute -node, a Docker command, effectively letting us run any container. This is a very powerful feature and it's the cornerstone of **composable architecture**. Also, it is worth noting how ICM does not have its own set of commands for stopping removing, pulling and running services (containers) and uses the same verbs found with Docker, Github and similar.
+ICM allows us to manage any other type of container with the *-docker* flag. IOW ICM calls all the way into the remote cloud compute-node with a Docker command, effectively letting us run any container. This is a very powerful feature and it's the cornerstone of **composable architecture**. Also, it is worth noting how ICM does not have its own set of commands for stopping removing, pulling and running services (containers) and uses the same verbs found with Docker, Github and similar.
 
 1. **Stopping Services**
 	1. You can stop any service (running container) via the *icm stop* command. To stop the default IRIS container on a specified AM node try: 
@@ -10,22 +10,22 @@ ICM allows us to manage any other type of container with the *-docker* flag. IOW
 
 ---
 
-2. **Removinga Service**
-At times we just want to get rid of a container image all together because we upgraded the system or it's a service we don't want to use anymore and we want to be good housekeepers and look after our storage
+2. **Removing a Service**
+	1. At times we just want to get rid of a container image all together because we upgraded the system or it's a service we don't want to use anymore and we want to be good housekeepers and look after our storage
 		* Removing a stopped container
 		```# icm rm -container signalfx -machine mename-r3-SD-test-0001```
 
 ---
 
 3. **Pulling Images** 
-When we want to perform an upgrade of a container we need to make sure we have the version we want. In Docker terminology this is a *pull* operation (the lingo is very Githubish)
+	1. When we want to perform an upgrade of a container we need to make sure we have the version we want. In Docker terminology this is a *pull* operation (the lingo is very Githubish)
 		* Pulling a new container image before a subsequent run to a specific machine or tier (identified by role names)
 		```# icm pull -image intersystems/iris:2020.1 -role DM```
 
 ---
 
-4. **Starting & Runnig Services for a Composable Architecture**
-We can obviously start any service we might want. When working with containers it is natural to start thinking in terms *services or utilities* or libraries as yet another container to run. Things just become simpler as there is no installation and configuration to worry about but only an end-point to fire up & leverage
+4. **Starting Services for a Composable Architecture**
+	1. We can obviously start any service we might want. When working with containers it is natural to start thinking in terms *services or utilities* or libraries as yet another container to run. Things just become simpler as there is no installation and configuration to worry about but only an end-point to fire up & leverage
 		* Starting a container on a tier of servers
 		```# icm start -container sysdig -role SD```
 ---
@@ -45,7 +45,7 @@ We can obviously start any service we might want. When working with containers i
 	```# icm upgrade -image intersystems/iris:2021.1.3 -role QS```
 
 	2. The standard *ICM ps* command will reveal a new version running
-	
+
 	```
 	# icm ps -container iris
 
