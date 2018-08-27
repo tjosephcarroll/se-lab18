@@ -13,14 +13,14 @@ ICM allows us to manage any other type of container with the *-docker* flag. IOW
 2. **Removing a Service**
 	1. At times we just want to get rid of a container image all together because we upgraded the system or it's a service we don't want to use anymore and we want to be good housekeepers and look after our storage
 		* Removing a stopped container
-		```# icm rm -container signalfx -machine mename-r3-SD-test-0001```
+			- ```# icm rm -container signalfx -machine mename-r3-SD-test-0001```
 
 ---
 
 3. **Pulling Images** 
 	1. When we want to perform an upgrade of a container we need to make sure we have the version we want. In Docker terminology this is a *pull* operation (the lingo is very Githubish)
 		* Pulling a new container image before a subsequent run to a specific machine or tier (identified by role names)
-		```# icm pull -image intersystems/iris:2020.1 -role DM```
+			- ```# icm pull -image intersystems/iris:2020.1 -role DM```
 
 ---
 
