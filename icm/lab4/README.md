@@ -28,11 +28,13 @@ ICM allows us to tune InterSystems IRIS instances
 			```
 	2. AWS Volume Types
 		* ```
-			standard    Magnetic                    1GB - 1024GB
-			gp2	        General Purpose SSD         1GB - 16384GB
-			io1	        Provisioned IOPS SSD        4GB - 16384GB
-			st1	        Throughput Optimized HDD    500GB - 16384GB
-			sc1         Cold HDD                    500GB - 16384GB
+			Storage Type | Description            | Capacity
+			------------ | ---------------------- | -------------
+			standard | Magnetic | 1GB - 1024GB
+			gp2 | General Purpose SSD | 1GB - 16384GB
+			io1	| Provisioned IOPS SSD | 4GB - 16384GB
+			st1	| Throughput Optimized HDD | 500GB - 16384GB
+			sc1 | Cold HDD | 500GB - 16384GB
 			```
 	3. GCP Volume Types
 		* ```
