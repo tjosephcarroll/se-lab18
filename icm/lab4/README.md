@@ -28,11 +28,11 @@ ICM allows us to tune InterSystems IRIS instances
 			```
 	2. AWS Volume Types
 		* ```
-			standard	Magnetic					1GB - 1024GB
-			gp2	        General Purpose SSD 		1GB - 16384GB
-			io1	        Provisioned IOPS SSD 		4GB - 16384GB
-			st1	        Throughput Optimized HDD	500GB - 16384GB
-			sc1	        Cold HDD					500GB - 16384GB
+			standard    Magnetic                    1GB - 1024GB
+			gp2	        General Purpose SSD         1GB - 16384GB
+			io1	        Provisioned IOPS SSD        4GB - 16384GB
+			st1	        Throughput Optimized HDD    500GB - 16384GB
+			sc1         Cold HDD                    500GB - 16384GB
 			```
 	3. GCP Volume Types
 		* ```
@@ -47,7 +47,7 @@ ICM allows us to tune InterSystems IRIS instances
 ---
 
 3. **Let's Tune it**
-	1. Remove the old cluster
+	1. Remove the old cluster as we will be reprovisioning new storage type
 		* ```# icm unprovision -stateDir ./ICM-0987654321 -cleanUp -force```
 	2. Edit the *definitions.json* and let's add
 		* Memory config and
