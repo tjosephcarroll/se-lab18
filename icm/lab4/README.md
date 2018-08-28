@@ -80,12 +80,18 @@ ICM allows us to tune InterSystems IRIS instances
 		* ```# icm run```
 	4. connect to the instance and verify that the storage and the memory parameters were configured as requested.
 		* ```# icm ssh -command "df -h" -role DM```
-		* ```icm session -interactive -namespace DB -role DM```
+		* ```# icm session -interactive -namespace DB -role DM```
 		* or alternative commands...
 
 ---
 
 4. **Simpler Retuning**
 	1. What if we just wanted to reconfigure some memory parameters?
-		* icm provision to refresh the instances.json from defaults & definitions JSON.
-		* icm upgrade to regenerate the container (with Durable %SYS intact) with new iris.cpf params
+		* Alter the values of *ISCglobals* and *ISCroutines* and then
+		* Re-provision to refresh the *instances.json* with the new defaults & definitions JSON
+			- ```# icm provision -stateDir ./ICM-0987654321```
+		* Run an upgrade to regenerate the container (with Durable %SYS intact) with new iris.cpf params now applied
+			- ```# icm upgrade -image intersystems/iris:2018.2.0-dev -role DM```
+---
+
+Congrats again :+1: 
