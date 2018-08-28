@@ -46,7 +46,7 @@ ICM allows us to tune InterSystems IRIS instances
 
 ---
 
-3. **Let's Tune it**
+3. **Let's Reprovision and Tune it**
 	1. Remove the old cluster as we will be reprovisioning new storage type
 		* ```# icm unprovision -stateDir ./ICM-0987654321 -cleanUp -force```
 	2. Edit the *definitions.json* and let's add
@@ -84,3 +84,8 @@ ICM allows us to tune InterSystems IRIS instances
 		* or alternative commands...
 
 ---
+
+4. **Simpler Retuning**
+	1. What if we just wanted to reconfigure some memory parameters?
+		* icm provision to refresh the instances.json from defaults & definitions JSON.
+		* icm upgrade to regenerate the container (with Durable %SYS intact) with new iris.cpf params
