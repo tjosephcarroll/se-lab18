@@ -1,0 +1,21 @@
+[
+    {
+	"Role": "DM",
+	"Count": "1",
+	"LicenseKey": "ubuntu-sharding-iris.key",
+	"ISCglobals": "0,0,4000,0,0,0",
+        "ISCroutines": "64",
+	"DataVolumeSize": "40",
+        "DataVolumeType": "io1",
+        "DataVolumeIOPS": "1000",
+        "WIJVolumeSize": "10",
+        "Journal1VolumeSize": "20",
+        "Journal2VolumeSize": "20"
+    },
+    {
+	"Role": "DS",
+	"LicenseKey": "ubuntu-sharding-iris.key",
+	"Count": "2",
+	"StarCount": "10"
+    }
+]

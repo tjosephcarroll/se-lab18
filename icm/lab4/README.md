@@ -50,6 +50,10 @@ same Error
 			pd-standard	Magnetic	1GB-64TB
 			pd-ssd	    SSD	        1GB-64TB
 			```
+	4. Azure Volume Types
+		* ```
+			aaa
+			```
 
 ---
 
@@ -57,8 +61,8 @@ same Error
 	1. Remove the old cluster
 		* ```# icm unprovision -stateDir ./ICM-0987654321 -cleanUp -force```
 	2. Edit the *definitions.json* and let's add
-		* Memory conifugation and
-		* Storage config as in the following definitions.json
+		* Memory config and
+		* Storage config as in the following *definitions.json* that you can also find as file in this Github directory:
 			- ```
 				[
     				{
@@ -88,5 +92,6 @@ same Error
 	4. connect to the instance and verify that the storage and the memory parameters were configured as requested.
 		* ```# icm ssh -command "df -h" -role DM```
 		* ```icm session -interactive -namespace DB -role DM```
+		* or alternative commands...
 
 ---
