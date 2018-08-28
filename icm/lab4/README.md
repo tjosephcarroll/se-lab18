@@ -27,7 +27,7 @@ ICM allows us to tune InterSystems IRIS instances
         	"Journal2VolumeSize": "20"
 			```
 	2. AWS Volume Types
-	
+
 Storage Type | Description              | Capacity
 ------------ | ------------------------ | -------------
 standard     | Magnetic                 | 1GB - 1024GB
@@ -37,10 +37,11 @@ st1	         | Throughput Optimized HDD | 500GB - 16384GB
 sc1          | Cold HDD                 | 500GB - 16384GB
 		
 	3. GCP Volume Types
-		* ```
-			pd-standard	Magnetic	1GB-64TB
-			pd-ssd	    SSD	        1GB-64TB
-			```
+Storage Type | Description | Capacity
+------------ | ----------- | --------
+pd-standard	 | Magnetic	   | 1GB-64TB
+pd-ssd       | SSD	       | 1GB-64TB
+		
 	4. Azure Volume Types
 		* ```
 			...
