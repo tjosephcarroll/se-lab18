@@ -41,7 +41,7 @@ The easiest way to get started with ICM is by using the /Samples/* we provide in
         2. As the previous step, please make sure the certificates are where we are told they should be
         3. Check the *default.json* content for the TLSKeyDir key 
     3. **InterSystems Key**. ICM can also aids you in running demos quickly by providing you with the right licenses. The only requirement is that you are VPN-connected to the InterSystems network. As you know, as an SE, you can use some temporary keys.
-        1. ``` # getLicense.sh```
+        1. ``` # getLicenses.sh```
         2. As before: check the location and (a) the key files (b) their location
     4. **Credentials** We just need this last step before we are ready to provision our first cloud infrastructure. We won't go into the details of this option as we'll leave it for the next lab. We'll look at setting up a more appropriate environment, and perhaps one to share and talk over with prospects and customers. In the meantime, let's check some basics to make sure ICM is installed and is running correctly
         1.  ``` 
