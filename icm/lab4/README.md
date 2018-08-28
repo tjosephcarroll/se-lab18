@@ -36,16 +36,15 @@ io1	         | Provisioned IOPS SSD     | 4GB - 16384GB
 st1	         | Throughput Optimized HDD | 500GB - 16384GB
 sc1          | Cold HDD                 | 500GB - 16384GB
 		
-	3. GCP Volume Types
+	
+3. GCP Volume Types
 Storage Type | Description | Capacity
 ------------ | ----------- | --------
 pd-standard	 | Magnetic	   | 1GB-64TB
 pd-ssd       | SSD	       | 1GB-64TB
 		
 	4. Azure Volume Types
-		* ```
-			...
-			```
+		* ```...```
 
 ---
 
