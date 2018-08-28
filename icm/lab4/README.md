@@ -37,5 +37,53 @@ same Error
         	"Journal1VolumeSize": "20",
         	"Journal2VolumeSize": "20"
 			```
+	2. AWS Volume Types
+		* ```
+			standard	Magnetic	              1GB - 1024GB
+			gp2	        General Purpose SSD	      1GB - 16384GB
+			io1	        Provisioned IOPS SSD      4GB - 16384GB
+			st1	        Throughput Optimized HDD  500GB - 16384GB
+			sc1	        Cold HDD	              500GB - 16384GB
+			```
+	3 GCP Volume Types
+		* ```
+			pd-standard	Magnetic	1GB-64TB
+			pd-ssd	    SSD	        1GB-64TB
+			```
 
 ---
+
+3. **Let's Tune it**
+	1. Remove the old cluster
+		* ```# icm unprovision -stateDir ./ICM-0987654321 -clearUp -force```
+	2. Edit the *definitions.json* and let's add
+		* Memory conifugation and
+		* Storage config as in the following definitions.json
+			- ```
+				[
+    				{
+						"Role": "DM",
+						"Count": "1",
+						"LicenseKey": "ubuntu-sharding-iris.key",
+						"ISCglobals": "0,0,4000,0,0,0",
+        				"ISCroutines": "64",
+        				"DataVolumeSize": "40",
+        				"DataVolumeType": "io1",
+        				"DataVolumeIOPS": "1000",
+        				"WIJVolumeSize": "10",
+        				"Journal1VolumeSize": "20",
+        				"Journal2VolumeSize": "20"	
+    				},
+    				{
+						"Role": "DS",
+						"LicenseKey": "ubuntu-sharding-iris.key",
+						"Count": "2",
+						"StarCount": "10"
+    				}
+				]
+				```
+	3. re-provision the cluster again
+	4. connect to the instance and verify that the storage and the memory parameters were configured as requested.
+
+---
+
