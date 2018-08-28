@@ -27,7 +27,7 @@ $ docker run -i -t busybox sh           // i = interactive; t = pseudo tty
 
 $ docker ps                             // No container available
 
-$ docker ps -a                          // I can see an exited/stopped container
+$ docker ps -a                          // I can see the exited/stopped container and its <CONTAINER_ID>
 
 $ docker commit <CONTAINER_ID> <MY-REPO>:<MY-TAG>
 // replace <VARS> with your specific container ID and
