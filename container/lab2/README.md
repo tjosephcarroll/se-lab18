@@ -15,7 +15,7 @@
           * Open a terminal session on the computer where you will be running docker commands, logged in as the user who will run them
           * In the terminal session, run the docker login command copied from the browser.  This will update your $HOME/.docker/config.json file, embedding this encrypted password into that file.
 Now you can run the normal docker pull command, such as:
-$ docker pull docker.iscinternal.com/intersystems/iri:2018.2.0.454.0
+  * ```$ docker pull docker.iscinternal.com/intersystems/iris:2018.2.0.454.0```
 
 
     b. docker.io
