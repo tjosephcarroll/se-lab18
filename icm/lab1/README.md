@@ -113,7 +113,7 @@ Many issues with ICM, like with anything "cloud", revolve around the security se
         * ```# keygenTLS.sh ./key/ ```
     4. Create temporary InterSystems IRIS key files (make sure you're VPN'd in) and copy them in the same /cloud/key location
     ```
-    # getLicense.sh
+    # getLicenses.sh
     # cp /Samples/license/* ./key/
     # ls -l ./key
     ```
