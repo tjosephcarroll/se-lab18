@@ -19,12 +19,12 @@ Do not change your Docker CE storage-driver and keys.
 
 $ docker run --rm busybox echo 'hello world'
 ```
-* What the above means:
-	- docker run: run a container
-	- --rm: remove it from the stack of stopped containers when done
+What the above means:
+	* docker run: run a container
+	*  --rm: remove it from the stack of stopped containers when done
 be diligent and clean and you won’t have issues ☺
-	- busybox: run the container called busybox, one of the smallest containers the size of 1.1MB
-	- echo argument: run the command echo
+	* busybox: run the container called busybox, one of the smallest containers the size of 1.1MB
+	* echo argument: run the command echo
 
 If you see the string output you have a successful Docker container environment on your laptop.
 Congratulations.
