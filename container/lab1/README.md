@@ -43,7 +43,7 @@ $ docker images
 
 **b)**
 The real deal is via a build process that can be automated.
-The build process starts with the declaration state -in a *Dockerfile*, of what we want our container image to be and contain. The build process allows us to satisfy any application dependencies at BUILD time (vs RUN time).
+The build process starts with the declaration state in a *Dockerfile* (no extension needed). In the Dockerfile we define what we want our container to have in it. The build process allows us to satisfy any application dependencies at BUILD time (vs RUN time).
 
 We will build an app and package it up in a container that we can then run anywhere.
 
@@ -142,7 +142,9 @@ $ docker stop $(docker ps -aq)
 $ docker rm $(docker ps -aq)
 ```
 
-* Fourth, Now that we have been diligent with our housekeeping, we can run our app
+* Fourth, Now that we have been diligent with our housekeeping, we can run our app with the following command
+    - -d stands for detach; the container will run background freeing your shell for other work
+    - -p or --publish for TCP socket publishing 
 ```
 $ docker run -d --name myservice -p 8080:8080 service:v1
 ```
@@ -160,7 +162,7 @@ or
 via your browser
 ```
 
-You might as well quickly monitor your container, just in case there is a heavy worload coming & you need to spin up another one :-o
+You might as well quickly monitor your container, just in case there is a heavy workload coming & you need to spin up another one :-o
 ```
 $ docker stats myservice
 ```
