@@ -143,8 +143,8 @@ $ docker rm $(docker ps -aq)
 ```
 
 * Fourth, Now that we have been diligent with our housekeeping, we can run our app with the following command
-    - -d stands for detach; the container will run background freeing your shell for other work
-    - -p or --publish for TCP socket publishing 
+    - -d stands for detach; the container will run in the background freeing your shell for other work
+    - -p or --publish for TCP socket publishing; the first value is the host exposed port; the second value, after the ":", is the value of the port inside the container.
 ```
 $ docker run -d --name myservice -p 8080:8080 service:v1
 ```
