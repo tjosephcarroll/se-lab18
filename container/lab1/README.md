@@ -108,6 +108,8 @@ For this exercise, again you can simply copy/paste from this Github page or clon
 
 4. **Building the Container** - 
 After the definition in the Dockerfile, let's build it
+    * we supply the -t flag for tagging it and
+    * don't forget that last "." dot, meaning, find a Dockerfile in this directory
 ```
 $ docker build -t service:v1 .
 ```
@@ -170,7 +172,9 @@ $ docker stats myservice
 ![container stats](../resources/docker_stats_container1.jpg)
 
 
-Stop & remove the container
+* Stop & remove the container
+    * please note how the simple 'ps' command shows you all *running* containers
+    * while the 'ps -a' shows you all *running and stopped* containers
 ```
 $ docker stop myservice
 
