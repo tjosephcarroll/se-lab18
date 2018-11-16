@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONTAINER_IMAGE=docker.iscinternal.com/intersystems/iris:2018.2.0.454.0
+CONTAINER_IMAGE=docker.iscinternal.com/intersystems/iris:2018.2.0.490.0
 
 # please note:
 # No default container name
