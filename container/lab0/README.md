@@ -11,6 +11,7 @@ or
 https://docs.docker.com/docker-for-windows/install/
 for Windows users: the install will ask you about Hyper-V. You will need that to run normal, standard (Linux) containers. You may encounter issues if you use VMware and as you switch. and Some people do not have any issues, some struggles. YMMV. More specific info can be found here:
 https://community.intersystems.com/post/using-intersystems-iris-containers-docker-windows
+or install the Docker engine on a Linux VM.
 
 Do not change your Docker CE storage-driver and keys.
 
