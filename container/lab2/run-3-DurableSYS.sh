@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONTAINER_IMAGE=docker.iscinternal.com/intersystems/iris:2018.2.454.0
+CONTAINER_IMAGE=docker.iscinternal.com/intersystems/iris:2018.2.490.0
 
 # Container run with the IRIS Durable %SYS feature: systems settings will be persisted across containers re-start & upgrade
 # Note on args:
