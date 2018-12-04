@@ -1,4 +1,4 @@
-#Running Your First IRIS Container
+# Running Your First IRIS Container
 
 0. **Requirements** - If you have not completed Lab0 please do so here https://github.com/tjosephcarroll/se-lab18/tree/master/container/lab0
 
@@ -29,3 +29,9 @@ Now you can run the normal docker pull command, such as:
       * At present you can view & pull from the private registry if you have given us your Docker ID
       * see the "Private Registry Access" section of https://usconfluence.iscinternal.com/display/TBD/Containers+Port
 
+2. **Pull down the IRIS Container Image** - Now that you have access to the repository it is time to pull down the container image in preparation for running it. To do this we will use the "docker pull" command. 
+
+```
+$ docker pull docker.iscinternal.com/intersystems/iris:2018.2.0.490.0
+```
+This command contacts the container registry, finds the container image, and pulls a copy of it down to our host machine.
