@@ -38,7 +38,7 @@ Now you can run the normal docker pull command, such as:
 
 * ```$ docker create --detach --name iris docker.iscinternal.com/intersystems/iris:2018.2.0-stable```
 * Here's a breakdown
-    * docker create <options> <image_name>, this tells the docker engine we want a container
+    * docker create <optional_flags> <image_name>, this tells the docker engine we want a container
     * --detach, this tells docker that we want to run the container in the background
     * --name iris, this names our container "iris"
     * docker.iscinternal.com/intersystems/iris:2018.2.0-stable, the name of the image we want to create a container from.
