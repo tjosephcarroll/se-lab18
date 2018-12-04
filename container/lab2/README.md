@@ -10,7 +10,7 @@
     * Enter the container
         * ```docker exec -it irisvolumetest bash```
     * Make a write to a file
-        * ```touch test_write.txt```
+        * ```touch <path_to_container_directory>/test_write.txt```
     * Exit the container
         * ```exit```
 
