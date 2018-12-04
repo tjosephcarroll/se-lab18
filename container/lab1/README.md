@@ -78,7 +78,7 @@
 11. **Where is your file?**
     * The file you created in 9 **only** exists inside that container and cannot be (easily) accessed from the host machine.
 
-12. **Repeat steps 2 through 6 chosing the container name iris_v2**
+12. **Repeat steps 3 through 6 chosing the container name iris_v2**
     * Here we are mocking an update to the container perhaps in the application code or the underlying version of IRIS.
     * Does your file exist in the new container? (Hint: no)
     * Since IRIS is a database platform, we need to handle this problem. We will in Lab2 
