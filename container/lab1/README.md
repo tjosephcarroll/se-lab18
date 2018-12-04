@@ -32,6 +32,17 @@ Now you can run the normal docker pull command, such as:
 2. **Pull down the IRIS Container Image** - Now that you have access to the repository it is time to pull down the container image in preparation for running it. To do this we will use the "docker pull" command. 
 
 ```
-$ docker pull docker.iscinternal.com/intersystems/iris:2018.2.0.490.0
+$ docker pull docker.iscinternal.com/intersystems/iris:2018.2.0-stable
 ```
 This command contacts the container registry, finds the container image, and pulls a copy of it down to our host machine.
+
+3. **Create an IRIS Container** - Now that we have the IRIS image locally we can create a container from this image. To do this we will use the "docker create" command. It has many options, but we're going to keep it simple for now.
+
+```
+$ docker create --detach --name iris docker.iscinternal.com/intersystems/iris:2018.2.0-stable
+```
+Here's a breakdown
+    * docker create <options> <image_name>, this tells the docker engine we want a container
+    * --detach, this tells docker that we want to run the container in the background
+    * --name iris, this names our container "iris"
+    * docker.iscinternal.com/intersystems/iris:2018.2.0-stable, the name of the image we want to create a container from.
